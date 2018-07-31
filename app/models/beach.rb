@@ -1,3 +1,3 @@
 class Beach < ApplicationRecord
-    has_many :review, dependent: :destroy
+    has_many :reviews
 end

@@ -29,8 +29,8 @@ class Api::BeachController < ApplicationController
 
     private
     def beach_params
-        params.require(:beach).permit(:name, :image)
+        params.require(:beach).permit(:name, :image_url)
     end
-end
+
 
 end
