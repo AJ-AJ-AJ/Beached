@@ -1,35 +1,35 @@
 class Api::BeachController < ApplicationController
     def index
-        @cities = City.all
-        render json: @cities
+        @beaches = Beach.all
+        render json: @beaches
     end
 
     def show
-        @city = City.find(params[:id])
-        render json: @city
+        @beach = Beach.find(params[:id])
+        render json: @beach
     end
 
     def create
-        @city = City.create(city_params)
-        render json: @city
+        @beach = Beach.create(beach_params)
+        render json: @beach
     end
 
     def update
-        @city = City.find(params[:id])
-        @city.update!(city_params)
+        @beach = Beach.find(params[:id])
+        @beach.update!(beach_params)
     
-        render json: @city
+        render json: @beach
       end
     
       def destroy
-        @city = City.find(params[:id]).delete
+        @beach = Beach.find(params[:id]).delete
     
         render status: :ok
       end
 
     private
-    def city_params
-        params.require(:city).permit(:name, :image)
+    def beach_params
+        params.require(:beach).permit(:name, :image)
     end
 end
 
