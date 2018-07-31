@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  beach: one
+  title: MyString
+  description: MyString
+
+two:
+  beach: two
+  title: MyString
+  description: MyString
