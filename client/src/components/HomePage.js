@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom'
 class HomePage extends Component {
     state = {
         beaches: [],
-        jamaicaId: "",
-        bahamasId: "",
-        usviId: ""
+        beachId: "",
     }
 
     componentDidMount = async () => {
@@ -16,29 +14,17 @@ class HomePage extends Component {
     }
 
     fetchBeachNamesAndId = () => {
-        let jamaicaId = 0
-        let bahamasId = 0
-        let usviId = 0
+        let beachId = 0
         axios.get('/api/beach')
             .then((response) => {
                 console.log(response.data)
                 return this.setState({beaches:response.data})
             }) 
             .then(() => {
-                let jamaica = this.state.beaches.filter((beach)=> {
-                    return beach.name.toUpperCase() === 'JAMAICA'
+                let beach = this.state.beaches.filter((beach)=> {
+                    return beach.name.toUpperCase() === 'BEACH'
                 })
-                let bahamas = this.state.beaches.filter((beach)=> {
-                    return beach.name.toUpperCase() === 'BAHAMAS'
-                })
-                let usvi = this.state.beaches.filter((beach)=> {
-                    return beach.name.toUpperCase() === 'USVI'
-                })
-                jamaicaId = `/beach/${jamaica.id}`
-                bahamasId = `/beach/${bahamas.id}`
-                usviId = `/beach/${usvi.id}`
-                this.setState({jamaicaId, bahamasId, usviId})
-                console.log(jamaicaId)
+                beachId = `/beach/:beach_id`
             })
     }
 
@@ -46,8 +32,8 @@ class HomePage extends Component {
             return(
                 <div>
                     <h1>ello</h1>
-                    <a href={this.state.jamaicaId} alt="">
-                    Jamaica
+                    <a href="/beach/:beach_id" alt="">
+                    Beach
                     </a>
                 </div>
             )
