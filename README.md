@@ -1,24 +1,41 @@
-# README
+# Beached.
+App that allows user to review their recent beach trips
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Link to Deployed App on Heroku:** 
 
-Things you may want to cover:
+**Link to User Stories on Trello:** <https://trello.com/b/G3pphJr9/beached>
 
-* Ruby version
+## Project Description
 
-* System dependencies
+The goal of this project was to create a full stack application using the react on rails. Beached is an original idea and it is meant to be used to help users determine which beaches they'd like to visit. Users will be able to post the reviews for the beaches they've visited. Users are able to create, read, and delete their reviews. 
 
-* Configuration
 
-* Database creation
+## Technologies Used
 
-* Database initialization
+  * Frameworks - React, Ruby On Rails, Node.js, Postgresql
+  * Languages - HTML5, CSS3, JavaScript, JSX
+  * Wireframe - Google Slides - [Google Slides](https://docs.google.com/presentation/d/1vXcY9zgcwcRJi4kHSeFmI1rEmKl7ztXiFthhR3tslCk/edit?usp=sharing)
+  * Project Planning & User Stories - [Trello](https://trello.com/b/G3pphJr9/beached)
+  * Deployment - Heroku - [Heroku]()
+  * Visual Studio Code
+  * iTerm
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Features
+ 
+  * ERD Data Model
 
-* Deployment instructions
 
-* ...
+## Wireframe
+
+![Wireframe](public/images/wired1.png)
+![Wireframe](public/images/wired2.png)
+![Wireframe](public/images/wired3.png)
+![Wireframe](public/images/wired4.png)
+![Wireframe](public/images/ERD.png)
+
+
+## Additions to a Future Version
+
+  * Fixing Bugs
+  * Adding to the styling
